@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Terminal, Send, Copy, Check } from 'lucide-react'
 
@@ -6,6 +6,17 @@ const TerminalUI = () => {
   const [command, setCommand] = useState('')
   const [output, setOutput] = useState([])
   const [copied, setCopied] = useState(false)
+  const scrollContainerRef = useRef(null)
+
+  const scrollToBottom = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight
+    }
+  }
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [output])
 
   const handleCommand = (cmd) => {
     switch (cmd.toLowerCase()) {
@@ -29,7 +40,7 @@ const TerminalUI = () => {
       case 'skills':
         return [
           'Core Competencies:',
-          '  Frontend: React, Tailwind CSS, Framer Motion',
+          '  Frontend: React',
           '  Backend: Python, Flask, FastAPI, Node.js',
           '  Data Science: ML, Data Viz, Pandas, Numpy',
           '  Tools: Git, Docker, Terminal Magic'
@@ -91,7 +102,7 @@ const TerminalUI = () => {
         </motion.button>
       </div>
 
-      <div className="h-48 overflow-y-auto mb-4 space-y-1 text-sm">
+      <div ref={scrollContainerRef} className="h-48 overflow-y-auto mb-4 space-y-1 text-sm scroll-smooth">
         <div className="text-green-400">Welcome to Mastan's Terminal</div>
         <div className="text-gray-400">Type 'help' to get started</div>
         {output.map((line, index) => (

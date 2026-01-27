@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: 240 10% 3.9%;
+  --bg-secondary: 240 3.7% 15.9%;
+  --text-primary: 0 0% 98%;
+  --text-secondary: 240 5% 64.9%;
+  --accent: 262 83% 58%; /* Purple accent */
+  --accent-glow: 262 83% 58% 0.5;
+  --accent-foreground: 210 40% 98%;
+  
+  --font-inter: 'Inter', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: hsl(var(--bg-primary));
+  color: hsl(var(--text-primary));
+  font-family: var(--font-inter);
+  margin: 0;
+  overflow-x: hidden;
+  cursor: none; /* Hide default cursor for custom one */
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-outfit);
+  color: hsl(var(--text-primary));
+  margin: 0;
+}
+
+a {
+  color: hsl(var(--accent));
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+button {
+  cursor: none; /* Ensure custom cursor visible */
+  font-family: var(--font-inter);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--bg-primary));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--bg-secondary));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent));
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}

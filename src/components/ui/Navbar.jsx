@@ -23,11 +23,13 @@ const Navbar = () => {
         { label: 'Contact', href: '#contact' },
     ]
 
+    const shouldShowBackground = scrolled || isOpen
+
     return (
         <motion.nav
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            className={`fixed top-4 left-4 right-4 z-40 rounded-2xl transition-all duration-300 ${scrolled
+            className={`fixed top-4 left-4 right-4 z-40 rounded-2xl transition-all duration-300 ${shouldShowBackground
                 ? 'bg-gradient-to-r from-space/80 to-deep-space/80 backdrop-blur-xl border border-white/10 shadow-2xl'
                 : 'bg-transparent'
                 }`}

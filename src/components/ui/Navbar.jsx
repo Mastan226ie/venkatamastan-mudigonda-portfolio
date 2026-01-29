@@ -5,14 +5,27 @@ import { Menu, X, Terminal } from 'lucide-react'
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
     const [scrolled, setScrolled] = useState(false)
+    const [isVisible, setIsVisible] = useState(true)
+    const [lastScrollY, setLastScrollY] = useState(0)
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 20)
+            const currentScrollY = window.scrollY
+
+            // Determine scroll direction and visibility
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                setIsVisible(false) // Hide on scroll down
+            } else {
+                setIsVisible(true)  // Show on scroll up
+            }
+
+            setLastScrollY(currentScrollY)
+            setScrolled(currentScrollY > 20)
         }
+
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+    }, [lastScrollY])
 
     const navItems = [
         { label: 'Home', href: '#hero' },

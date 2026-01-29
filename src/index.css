@@ -25,7 +25,7 @@
   }
 
   .section-padding {
-    @apply py-24 px-4 sm:px-6 lg:px-8;
+    @apply py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8;
   }
 }
 

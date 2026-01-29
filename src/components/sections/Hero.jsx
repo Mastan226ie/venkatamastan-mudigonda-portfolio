@@ -16,50 +16,50 @@ const Hero = () => {
   }, [roles.length])
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative px-4 pt-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative px-4 sm:px-6 pt-20 sm:pt-24">
       <div className="max-w-5xl mx-auto text-center z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <div className="inline-block mb-6 px-4 py-1.5 rounded-full border border-electric/30 bg-electric/10 backdrop-blur-sm">
-            <span className="text-electric font-mono text-sm tracking-wider">
+          <div className="inline-block mb-4 sm:mb-6 px-3 sm:px-4 py-1.5 rounded-full border border-electric/30 bg-electric/10 backdrop-blur-sm">
+            <span className="text-electric font-mono text-xs sm:text-sm tracking-wider">
               &lt;Hello_World /&gt;
             </span>
           </div>
 
-          <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-8">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 sm:mb-8">
             <span className="block text-white mb-2">Venkata Mastan</span>
             <span className="text-electric">Mudigonda</span>
           </h1>
 
-          <div className="h-16 mb-10 flex items-center justify-center">
-            <span className="text-xl md:text-3xl text-gray-400 font-light mr-3">I am a</span>
+          <div className="h-14 sm:h-16 mb-8 sm:mb-10 flex items-center justify-center flex-wrap px-4">
+            <span className="text-lg sm:text-xl md:text-3xl text-gray-400 font-light mr-2 sm:mr-3">I am a</span>
             <TypewriterText
               key={currentRoleIndex} // Key forces re-render for clean typing effect
               text={roles[currentRoleIndex]}
-              className="text-xl md:text-3xl text-electric font-semibold"
+              className="text-lg sm:text-xl md:text-3xl text-electric font-semibold"
               speed={50}
               delay={500}
             />
           </div>
 
-          <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto mb-10 sm:mb-12 leading-relaxed px-4">
             Crafting scalable data systems and intuitive web experiences.
             Passionate about bridging the gap between <span className="text-white font-medium">complex data</span> and <span className="text-white font-medium">user impact</span>.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-16 sm:mb-20 px-4">
             <a
               href="#projects"
-              className="px-8 py-3.5 rounded-full bg-electric text-white font-medium hover:bg-electric-accent transition-all shadow-lg shadow-electric/25 hover:shadow-electric-accent/40"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-electric text-white font-medium hover:bg-electric-accent transition-all shadow-lg shadow-electric/25 hover:shadow-electric-accent/40 hover:scale-105"
             >
               View My Work
             </a>
             <a
               href="#contact"
-              className="px-8 py-3.5 rounded-full border border-white/10 hover:border-electric/50 hover:bg-electric/5 transition-all text-gray-300 hover:text-white backdrop-blur-sm"
+              className="w-full sm:w-auto px-8 py-3.5 rounded-full border border-white/10 hover:border-electric/50 hover:bg-electric/5 transition-all text-gray-300 hover:text-white backdrop-blur-sm hover:scale-105"
             >
               Contact Me
             </a>

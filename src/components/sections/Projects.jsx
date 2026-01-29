@@ -12,77 +12,80 @@ const Projects = () => {
     {
       id: 1,
       title: 'Trajecta',
-      description: 'Advanced trajectory mapping and real-time data processing for complex spatial analysis.',
-      tags: ['Data Science', 'Spatial Analysis', 'Python', 'ML'],
+      description: 'An Expo-based React Native application for mobile development with modern tooling and best practices.',
+      tags: ['React Native', 'Expo', 'TypeScript', 'Mobile'],
       githubUrl: 'https://github.com/Mastan226ie/Trajecta',
       liveUrl: null,
       icon: <GitBranch />,
       features: [
-        'Path tracking algorithms',
-        'Velocity profile analysis',
-        'Interactive spatial viz'
+        'Cross-platform mobile app',
+        'Expo development workflow',
+        'Modern React Native setup'
       ],
       stats: {
-        stars: '12',
-        forks: '5',
-        lastUpdated: 'Recently'
+        stars: '0',
+        forks: '0',
+        lastUpdated: 'Active'
       }
     },
     {
       id: 2,
       title: 'SalesSense',
-      description: 'AI-Powered sales forecasting tool that leverages historical data to predict future trends.',
-      tags: ['Machine Learning', 'Forecasting', 'Pandas', 'Analytics'],
+      description: 'AI-powered sales forecasting tool using ARIMA models to predict future sales trends with confidence intervals and interactive visualizations.',
+      tags: ['Python', 'ARIMA', 'Streamlit', 'Time Series'],
       githubUrl: 'https://github.com/Mastan226ie/Sales-Analysis-nd-Forecasting',
       liveUrl: null,
       icon: <BarChart3 />,
       features: [
-        'Time-series forecasting',
-        'Predictive modeling',
-        'Dynamic trend analysis'
+        'ARIMA time series forecasting',
+        'Interactive Streamlit dashboard',
+        'CSV export functionality',
+        'MAE evaluation metrics'
       ],
       stats: {
-        stars: '18',
-        forks: '4',
-        lastUpdated: '1 month ago'
+        stars: '0',
+        forks: '0',
+        lastUpdated: 'Active'
       }
     },
     {
       id: 3,
       title: 'Mapras Weather',
-      description: 'A modern React application providing real-time weather updates with a sleek interface.',
-      tags: ['React', 'API Integration', 'Tailwind', 'Web Dev'],
+      description: 'Modern, responsive weather application built with React and Vite, providing real-time weather updates globally using OpenWeatherMap API.',
+      tags: ['React', 'Vite', 'OpenWeatherMap API', 'CSS3'],
       githubUrl: 'https://github.com/Mastan226ie/mapras-weather-app',
       liveUrl: 'https://mapras-weather-app.vercel.app/',
       icon: <FileText />,
       features: [
-        'Real-time API fetching',
-        'Location-based weather',
-        'Responsive dashboard'
+        'Real-time weather data',
+        'Global city coverage',
+        'Dynamic weather icons',
+        'Responsive design'
       ],
       stats: {
-        stars: '10+',
-        forks: '2',
-        lastUpdated: '2 weeks ago'
+        stars: '0',
+        forks: '0',
+        lastUpdated: 'Active'
       }
     },
     {
       id: 4,
       title: 'Mapras Edu',
-      description: 'A comprehensive education platform designed to streamline learning and resource management.',
-      tags: ['Fullstack', 'Education', 'React', 'Node.js'],
+      description: 'Educational web platform built with React and Vite, featuring modern development tooling and best practices for learning management.',
+      tags: ['React', 'Vite', 'Web Dev', 'Education'],
       githubUrl: 'https://github.com/Mastan226ie/mapras-edu-web',
       liveUrl: null,
       icon: <Calendar />,
       features: [
-        'Course orchestration',
-        'Student dashboards',
-        'Resource management'
+        'React + Vite setup',
+        'Modern build tooling',
+        'ESLint configuration',
+        'Fast refresh support'
       ],
       stats: {
-        stars: '8',
-        forks: '3',
-        lastUpdated: '3 weeks ago'
+        stars: '0',
+        forks: '0',
+        lastUpdated: 'Active'
       }
     }
   ]

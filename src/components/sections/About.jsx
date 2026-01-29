@@ -47,7 +47,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-3xl md:text-4xl font-bold mb-6 flex items-center gap-3"
+                className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 flex items-center gap-3"
               >
                 <span className="text-electric">/</span> About Me
               </motion.h2>
@@ -57,7 +57,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-gray-400 text-lg leading-relaxed space-y-4"
+                className="text-gray-400 text-base sm:text-lg leading-relaxed space-y-4"
               >
                 <p>
                   I am a <span className="text-white font-medium">Computer Science student</span> with a strong foundation in <span className="text-white font-medium">Data Science and Machine Learning</span>. My passion lies in uncovering patterns within complexity and transforming raw data into actionable intelligence.
@@ -69,7 +69,7 @@ const About = () => {
             </div>
 
             {/* Status Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 {
                   icon: <Briefcase size={20} />,
@@ -111,14 +111,14 @@ const About = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + (index * 0.1) }}
                 >
-                  <GlassCard className="p-4 flex items-center gap-4 hover:border-electric/30 transition-colors group">
-                    <div className={`p-3 rounded-lg ${item.bg} ${item.color} group-hover:scale-110 transition-transform`}>
+                  <GlassCard className="p-4 flex items-center gap-3 sm:gap-4 hover:border-electric/30 transition-all hover:scale-[1.02] group">
+                    <div className={`p-2 sm:p-3 rounded-lg ${item.bg} ${item.color} group-hover:scale-110 transition-transform`}>
                       {item.icon}
                     </div>
-                    <div>
+                    <div className="flex-1 min-w-0">
                       <div className="text-xs text-gray-500 mb-1">{item.label}</div>
-                      <div className="font-bold text-white">{item.value}</div>
-                      <div className="text-xs text-gray-400">{item.sub}</div>
+                      <div className="font-bold text-white text-sm sm:text-base">{item.value}</div>
+                      <div className="text-xs text-gray-400 truncate">{item.sub}</div>
                     </div>
                   </GlassCard>
                 </motion.div>
@@ -134,7 +134,7 @@ const About = () => {
               className="p-4 rounded-lg bg-electric/5 border border-electric/10 flex items-start gap-3"
             >
               <Sparkles size={20} className="text-electric mt-1 shrink-0" />
-              <p className="text-sm text-gray-300 italic">
+              <p className="text-xs sm:text-sm text-gray-300 italic">
                 "Architecting intelligent web solutions powered by Data Science precision and Creative Development."
               </p>
             </motion.div>

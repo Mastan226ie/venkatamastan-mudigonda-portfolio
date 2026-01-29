@@ -3,9 +3,21 @@ import { motion, useSpring, useMotionValue, useVelocity, useTransform, AnimatePr
 import { Terminal, Link, Code, Maximize2 } from 'lucide-react'
 
 const AnimatedCursor = () => {
+  // Detect touch devices - don't show custom cursor on mobile/tablets
+  const isTouchDevice = () => {
+    return (('ontouchstart' in window) ||
+      (navigator.maxTouchPoints > 0) ||
+      (navigator.msMaxTouchPoints > 0))
+  }
+
   const [cursorType, setCursorType] = useState('default')
   const [isVisible, setIsVisible] = useState(false)
   const [isClicking, setIsClicking] = useState(false)
+
+  // Early return for touch devices
+  if (isTouchDevice()) {
+    return null
+  }
 
   // Raw Mouse Position (Motion Values)
   const mX = useMotionValue(0)

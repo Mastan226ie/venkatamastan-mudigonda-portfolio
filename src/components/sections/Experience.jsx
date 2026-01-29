@@ -61,7 +61,7 @@ const Experience = () => {
         <div className="relative">
           {/* Vertical timeline line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-electric via-electric/50 to-electric hidden md:block" />
-          
+
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <motion.div
@@ -74,7 +74,7 @@ const Experience = () => {
               >
                 {/* Timeline node */}
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-electric border-4 border-space z-10 hidden md:block" />
-                
+
                 {/* Content */}
                 <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
                   <GlassCard>
@@ -94,7 +94,7 @@ const Experience = () => {
                             {exp.type === 'internship' ? 'INTERNSHIP' : 'EDUCATION'}
                           </span>
                         </div>
-                        
+
                         <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                           <div className="flex items-center gap-1">
                             <Calendar size={14} />
@@ -105,9 +105,9 @@ const Experience = () => {
                             <span>{exp.duration}</span>
                           </div>
                         </div>
-                        
+
                         <p className="text-gray-300 mb-4">{exp.description}</p>
-                        
+
                         {exp.achievements && (
                           <div className="space-y-2">
                             <h4 className="text-sm font-semibold text-electric">Key Achievements</h4>
@@ -121,7 +121,7 @@ const Experience = () => {
                             </ul>
                           </div>
                         )}
-                        
+
                         {exp.technologies && (
                           <div className="mt-4">
                             <div className="flex flex-wrap gap-2">
@@ -140,10 +140,10 @@ const Experience = () => {
                     </div>
                   </GlassCard>
                 </div>
-                
+
                 {/* Spacer for desktop */}
                 <div className="hidden md:block w-2/12" />
-                
+
                 {/* Date for mobile */}
                 <div className="md:hidden mt-4 text-center">
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric/10 text-electric">

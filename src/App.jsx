@@ -40,15 +40,15 @@ function App() {
           <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-space"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-space px-6"
           >
-            <div className="text-center">
-              <div className="text-electric font-mono text-2xl mb-4">
-                <span className="animate-typing overflow-hidden whitespace-nowrap border-r-2 border-electric">
+            <div className="text-center w-full">
+              <div className="text-electric font-mono mb-8 px-4 text-center">
+                <div className="text-lg sm:text-xl lg:text-2xl font-bold tracking-wider break-words">
                   LOADING &gt;&gt;&gt; Mastan's Digital Experience
-                </span>
+                </div>
               </div>
-              <div className="w-64 h-1 bg-glass rounded-full overflow-hidden mx-auto">
+              <div className="w-full max-w-xs mx-auto h-1 bg-glass rounded-full overflow-hidden">
                 <motion.div
                   className="h-full bg-electric"
                   initial={{ width: 0 }}

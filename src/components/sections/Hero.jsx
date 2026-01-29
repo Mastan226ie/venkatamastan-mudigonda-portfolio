@@ -34,12 +34,12 @@ const Hero = () => {
             <span className="text-electric">Mudigonda</span>
           </h1>
 
-          <div className="h-14 sm:h-16 mb-8 sm:mb-10 flex items-center justify-center flex-wrap px-4">
-            <span className="text-lg sm:text-xl md:text-3xl text-gray-400 font-light mr-2 sm:mr-3">I am a</span>
+          <div className="h-auto min-h-14 sm:min-h-16 mb-8 sm:mb-10 flex flex-col sm:flex-row items-center justify-center gap-2 px-4">
+            <span className="text-lg sm:text-xl md:text-3xl text-gray-400 font-light text-center">I am a</span>
             <TypewriterText
               key={currentRoleIndex} // Key forces re-render for clean typing effect
               text={roles[currentRoleIndex]}
-              className="text-lg sm:text-xl md:text-3xl text-electric font-semibold"
+              className="text-lg sm:text-xl md:text-3xl text-electric font-semibold text-center"
               speed={50}
               delay={500}
             />
